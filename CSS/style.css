@@ -1,0 +1,426 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "メイリオ", "Goldman";
+    color: #40220F;
+}
+
+.rocknroll-one-regular {
+  font-family: "RocknRoll One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.flex {
+    display: flex;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 8vh;
+    width: 100%;
+    background-color: #E8DD34;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Agency FB";
+    z-index: 100;
+}
+
+header img {
+    height: 6vh;
+    margin-left: 50px;
+}
+
+#headerlogo {
+    height: 100%;
+    align-items: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    gap: 40px;
+    margin-right: 50px;
+}
+
+ul li a {
+  color: #fff;
+  text-decoration: none;   /* 必要に応じて装飾を消す */
+  font-family: "Goldman";
+}
+ul li a:hover {
+  color: #C6B82E;         /* ホバー時の文字色 */
+}
+
+
+#fiestview {
+    position: relative;
+    /* 子要素の絶対位置指定の基準にする */
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+}
+
+#fiestview img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.front {
+    position: absolute;
+    z-index: 2;
+    width: 20%;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.back {
+    z-index: 1;
+    opacity: 0.9;
+}
+
+
+/* ここから飛行機とんでる */
+
+.sky {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* background: linear-gradient(to top, #87ceeb, #ffffff); 空っぽい背景 */
+  background-image: url(../images/fiestview.jpg);
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.plane {
+  position: absolute;
+  top: 22vh;
+  left: -500px; /* 初期位置：画面外 */
+  width: 500px;
+  animation: fly 5.5s linear infinite;
+}
+
+@keyframes fly {
+  0% {
+    left: -200px;
+    transform: rotate(0deg);
+  }
+  50% {
+    /* transform: rotate(5deg); 少し傾けて飛行感を出す */
+  }
+  100% {
+    left: 100%;
+    transform: rotate(0deg);
+  }
+}
+
+/* ここまで飛行機飛んでる */
+
+
+
+.firstviewtext P{
+    font-size: clamp(
+    14px,      /* 最小文字サイズ */
+    4vw,       /* 可変部分（理想のサイズ） */
+    20px       /* 最大文字サイズ */
+  );
+}
+
+#pagetop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#pagetop img {
+    width: 80px;
+    height: 80px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+#pagetop img:hover {
+    opacity: 1;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+#aboutcompany {
+    justify-content: center;
+    /* 横方向の中央揃え */
+    align-items: center;
+    /* 縦方向の中央揃え */
+
+    /* 横幅いっぱい */
+    text-align: center;
+    font-size: 20px;
+    line-height: 2em;
+    margin: 20vh;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+figure img {
+    width: 20vw;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+#destination,
+#blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10vh 0;
+}
+
+#destinationlist,
+#bloglist {
+    justify-content: center;
+    align-items: flex-start;
+    /* flex-wrap: wrap; */
+    gap: 2vw;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 50px;
+}
+
+#blog .link-wrap,
+#destination .link-wrap {
+    margin-left: auto;
+    margin-right: 70px;
+    margin-top: 50px;
+}
+
+figcaption {
+    margin-top: 34px;
+    font-size: 20px;
+}
+
+
+/* ここからabout */
+#aboutfirstview {
+    height: 100vh;
+}
+
+.textcenter {
+    text-align: center;
+    font-family: "Goldman";
+}
+
+.aboutfront {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    font-family: 'Agency FB';
+}
+
+#about {
+    /* height: 100vh; */
+    text-align: center;
+    line-height: 1.3rem;
+    margin: 10vh auto;
+}
+
+#hobitton {
+    height: 100vh;
+    text-align: center;
+    margin-bottom: 30vh;
+}
+
+#hobitton img {
+    filter: sepia(100%);
+    width: 50vw;
+    height: auto;
+    margin:10vh auto;
+}
+
+#representative {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    line-height: 1.7rem;
+    font-size: 20px;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+#representative p{
+    font-size: 1rem;
+    line-height: 2.5rem;
+    margin-bottom: 40vh;
+}
+
+/* ここまでabout */
+
+/* ここからdestination */
+
+#list{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#destinationlistsec {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3vw;    /* 画像の間隔 */
+}
+
+#add{
+    margin: 50px;
+    font-size: 30px;
+}
+
+/* ここまでdestination */
+
+/* ここからcontact */
+
+#contact{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+#contactfronttext{
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    width: 90vw;
+}
+
+
+/* 親要素の幅を指定しつつ左寄せ */
+form p {
+  width: 51%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* ラベルをブロック化して左寄せ */
+form p label {
+  display: block;
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+
+/* 入力欄の幅を100%にして、文字も左寄せに */
+input,
+textarea {
+  width: 100%;
+  padding: 0.5em;      /* 余白を入れて見やすく */
+  text-align: left;    /* 文字を左端から開始 */
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: #FAFAB4;
+}
+
+#submit{
+    width: 10vw;
+    text-align: center;
+    margin: 40px 0 150px 0;
+}
+
+
+
+.center{
+    margin: auto;
+    width: 51%;
+    margin-bottom: 50px;
+}
+
+
+.answer {
+    display: block grid;
+    transition: grid-template-rows 0.5s;
+}
+
+p.noIndent {
+    text-indent: 0;
+}
+
+
+/*開ける事を意味するアイコン*/
+summary::after {
+    content: "⊕";
+    color: white;
+    font-size: 1.2em;
+    line-height: 1;    /* 縦方向のずれを防止 */
+}
+
+/*閉じる事を意味するアイコン*/
+details[open] summary::after {
+    content: "⊖";
+}
+
+details.FAQs summary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75em 1em;
+    cursor: pointer;
+    background-color: #E8DD34;
+    color: white;
+    border-radius: 30px;
+}
+
+details.FAQs{
+    background-color: #FAFAB4;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    overflow: hidden;
+    transition: background 0.3s;
+    margin: 10px;
+}
+
+details.FAQs .answer {
+    max-height: 0;                /* たたんだときの高さ */
+    overflow: hidden;
+    transition: max-height 0.4s ease; 
+}
+  
+  /* ───────────────────────────────── */
+  /* open のときに max-height を十分大きくして展開 */
+details.FAQs[open] .answer {
+    max-height: 1000px;           /* コンテンツの最大高さ以上の値を指定 */
+}
+
+.inner p{
+    text-align: left;
+    padding: 1.5em;
+}
+
+/* ここまでcontact */
+
+footer {
+    height: 33vh;
+    background-color: #E8DD34;
+    justify-content: center;
+    /* 横方向の中央揃え */
+    align-items: center;
+    /* 縦方向の中央揃え */
+}

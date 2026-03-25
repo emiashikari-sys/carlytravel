@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+header img{
+    margin-left: 10px;
+}
+header nav ul {
+    font-size: 15px;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+h1{
+    font-size: 25px;
+}
+
+h2{
+    font-size: 20px;
+}
+
+#hobitton{
+    margin: 10vh auto;
+}
+
+#about,
+#representative{
+    font-size: 15px;
+    margin: 10vh 10vw;
+}
+
+figcaption{
+    font-size: 12px;
+}
+
+form p {
+    width: 70%;
+}
+
+.center{
+    width: 70%;
+}
+
+#submit{
+    width: 20vw;
+    text-align: center;
+}
